@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantôme – Débusque les abonnements que tu paies sans t'en servir</title>
+<meta name="description" content="Dépose ton relevé bancaire : Fantôme repère les prélèvements oubliés et te dit combien ils te coûtent par an.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fantôme – Débusque les abonnements que tu paies sans t'en servir">
+<meta property="og:description" content="Tu paies sûrement des abonnements que tu n'utilises plus. Trouve-les en 2 minutes.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#0F2A24">
+<style>
+:root{--encre:#0F2A24;--braise:#E4572E;--creme:#F6F1E7;--gris:#5B6660;--trait:#DDD6C6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--encre);font:18px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+header{padding:20px 0}
+.logo{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:24px;letter-spacing:-.5px}
+.logo span{color:var(--braise)}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:38px;line-height:1.1;letter-spacing:-1px;margin:24px 0 16px}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:26px;line-height:1.2;margin-bottom:14px}
+.lead{font-size:19px;color:var(--gris);margin-bottom:28px}
+.btn{display:block;width:100%;min-height:56px;padding:16px 20px;background:var(--braise);color:#fff;font:700 18px system-ui,sans-serif;text-align:center;text-decoration:none;border:0;border-radius:10px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.note{font-size:15px;color:var(--gris);margin-top:10px}
+section{padding:40px 0;border-top:1px solid var(--trait)}
+.chiffre{background:var(--encre);color:var(--creme);padding:32px 0;margin-top:40px}
+.chiffre p{font-family:Georgia,serif;font-size:24px;line-height:1.3}
+.chiffre b{color:var(--braise)}
+ol{list-style:none;counter-reset:n}
+li{counter-increment:n;padding-left:44px;position:relative;margin-bottom:18px}
+li::before{content:counter(n);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--encre);color:var(--creme);font:700 16px/30px system-ui;text-align:center}
+li strong{display:block}
+form{display:grid;gap:12px}
+input[type=email]{width:100%;min-height:56px;padding:14px 16px;font-size:18px;border:2px solid var(--encre);border-radius:10px;background:#fff;color:var(--encre)}
+input[type=email]:focus{outline:3px solid var(--braise);outline-offset:2px}
+.hp{position:absolute;left:-9999px}
+footer{padding:32px 0 48px;font-size:14px;color:var(--gris);border-top:1px solid var(--trait)}
+footer h3{font-size:15px;color:var(--encre);margin:16px 0 4px}
+.todo{background:#FFF3C4;padding:0 4px}
+@media(min-width:700px){h1{font-size:52px}.wrap{padding:0 32px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">Fantôme<span>.</span></div></div></header>
+
+<main>
+<div class="wrap">
+  <h1>Tu paies sûrement des abonnements que tu n'utilises plus.</h1>
+  <p class="lead">Dépose ton relevé : Fantôme repère les prélèvements oubliés et te dit combien ils te coûtent par an.</p>
+  <a class="btn" href="#commencer">Commencer, c'est gratuit</a>
+  <p class="note">Aucune carte bancaire demandée.</p>
+</div>
+
+<div class="chiffre"><div class="wrap">
+  <p>Un abonnement oublié à 9 € par mois, c'est <b>108 € par an</b>. Trois, c'est <b>324 €</b>.</p>
+</div></div>
+
+<section><div class="wrap">
+  <h2>Ce que Fantôme fait pour toi</h2>
+  <ol>
+    <li><strong>Il repère les prélèvements réguliers.</strong>Même les petits, ceux qu'on ne voit plus sur un relevé.</li>
+    <li><strong>Il les classe par coût annuel.</strong>Tu vois d'abord ceux qui pèsent vraiment.</li>
+    <li><strong>Il écrit la lettre de résiliation.</strong>Prête à envoyer, un abonnement à la fois.</li>
+  </ol>
+</div></section>
+
+<section id="commencer"><div class="wrap">
+  <h2>Fantôme ouvre très bientôt</h2>
+  <p class="lead">Laisse ton email : tu seras prévenu en premier, et le premier repérage est gratuit.</p>
+  <form action="https://formspree.io/f/REMPLACER_PAR_TON_ID" method="POST">
+    <label for="email" class="note" style="margin:0">Ton adresse email</label>
+    <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="prenom@exemple.fr" required>
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn" type="submit">Commencer</button>
+  </form>
+  <p class="note">Ton email sert uniquement à te prévenir du lancement. Aucun relevé bancaire n'est demandé pour l'instant. Tu peux te désinscrire à tout moment en répondant à un de nos messages.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <h3>Mentions légales</h3>
+  <p>Éditeur : <span class="todo">[Prénom NOM]</span>, entrepreneur individuel, SIRET <span class="todo">[à compléter]</span>.<br>
+  Adresse : <span class="todo">[à compléter]</span>. Contact : <span class="todo">[email]</span>.<br>
+  Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
+  <h3>Confidentialité</h3>
+  <p>Les adresses email collectées servent uniquement à t'informer du lancement de Fantôme. Elles ne sont ni vendues ni cédées. Pour les consulter ou les supprimer, écris à <span class="todo">[email]</span>.</p>
+</div></footer>
+</body>
+</html>
